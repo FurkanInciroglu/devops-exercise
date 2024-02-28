@@ -103,6 +103,7 @@ do that. So my layout approach roughly like below;
  ├── providers.tf
  ├── variables.tf
  └── outputs.tf
+ 
 2-) Assume I’ve already done AWS credentials and expose them on my machine which I run terraform commands or if I use Github/Gitlab I need to create secret and define my AWS credentials. It hepls me to set AWS cred whenever run runners/actions. Also creating ssh-key-pair to access our AWS instance need to be done before creating terraform script. I am not sure are we installing Ansible on the same place with my Terraform host or different machine(because I’ll use remote-exec or local-exec provisoner based on that) but I assume it’s different host so I use remote-exec for Ansible installation.
 
  		terraform {
